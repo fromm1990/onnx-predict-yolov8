@@ -1,0 +1,13 @@
+[project]
+name = "onnx-predict-yolov8"
+version = "1.0.0"
+description = ""
+authors = [
+    {name = "Kasper Fromm Pedersen", email = "kasperf@cs.aau.dk"},
+    {name = "Kristian Torp", email = "torp@cs.aau.dk"}
+]
+requires-python = ">3.8,<3.11.0"
+dependencies = [
+    "numpy>=1.20",
+    "Pillow>=9.1.0",
+]

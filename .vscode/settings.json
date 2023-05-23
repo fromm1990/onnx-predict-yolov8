@@ -1,0 +1,50 @@
+{
+    "python.autoComplete.extraPaths": [
+        "__pypackages__/3.10/lib"
+    ],
+    "python.analysis.extraPaths": [
+        "__pypackages__/3.10/lib"
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+    },
+    "isort.args":["--profile", "black"],
+    "python.analysis.diagnosticMode": "workspace",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.formatting.provider": "none",
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/*.code-search": true,
+        "**/__pypackages__": true
+    },
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/*/**": true,
+        "**/.hg/store/**": true,
+        "**/__pypackages__": true
+    },
+    "python.linting.ignorePatterns": [
+        "**/site-packages/**/*.py",
+        ".vscode/*.py",
+        "**/__pypackages__"
+    ],
+    "python.analysis.exclude": [
+        "**/__pypackages__",
+        "**/node_modules",
+        " **/site-packages/**",
+        "**/Lib/**",
+        "**/__pycache__"
+    ],
+    // Testing
+    "python.testing.pytestArgs": [
+        "test"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+}
