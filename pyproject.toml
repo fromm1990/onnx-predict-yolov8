@@ -6,8 +6,16 @@ authors = [
     {name = "Kasper Fromm Pedersen", email = "kasperf@cs.aau.dk"},
     {name = "Kristian Torp", email = "torp@cs.aau.dk"}
 ]
+maintainers = [
+    {name = "Kasper Fromm Pedersen", email = "kasperf@cs.aau.dk"},
+]
+license = { file = "LICENSE"}
 requires-python = ">3.8,<3.11.0"
 dependencies = [
     "numpy>=1.20",
     "Pillow>=9.1.0",
 ]
+
+[project.urls]
+homepage = "https://www.cs.aau.dk/"
+repository = "https://github.com/fromm1990/onnx-predict-yolov8"
