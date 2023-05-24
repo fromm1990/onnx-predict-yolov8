@@ -5,6 +5,7 @@ This repository is a light weight library to ease the use of ONNX models exporte
 ```python
 from onnxruntime import InferenceSession
 from PIL import Image
+from opyv8 import Predictor
 
 model = Path("path/to/file.onnx")
 # List of classes where the index match the class id in the ONNX network
