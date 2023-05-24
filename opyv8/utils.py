@@ -1,11 +1,12 @@
 from __future__ import annotations
 
 import numpy
-from model import ImageTensor, PInferenceSession
 from numpy import float32, float64, int32, int64
 from numpy.typing import NDArray
 from PIL import ImageOps
 from PIL.Image import Image, Resampling
+
+from opyv8.model import ImageTensor, PInferenceSession
 
 
 def compute_iou(box: NDArray[int32], boxes: NDArray[int32]) -> NDArray[float64]:

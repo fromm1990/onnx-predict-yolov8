@@ -4,11 +4,12 @@ from pathlib import Path
 from typing import List, cast
 
 import numpy
-import utils
-from model import Label, LabelImage, PInferenceSession
 from numpy import ndarray
 from PIL import Image as ImageModule
 from PIL.Image import Image
+
+from opyv8 import utils
+from opyv8.model import Label, LabelImage, PInferenceSession
 
 
 class Predictor:
