@@ -1,5 +1,7 @@
+from __future__ import annotations
+
 from pathlib import Path
-from typing import cast
+from typing import List, cast
 
 import numpy
 import utils
@@ -31,7 +33,7 @@ class Predictor:
             raise ValueError("img must be an PIL Image, Path or string")
 
         tensor = utils.image_to_tensor(img, self.__model)
-        results = cast(list[ndarray], self.__model.run(None, {"images": tensor.data}))
+        results = cast(List[ndarray], self.__model.run(None, {"images": tensor.data}))
         predictions = numpy.squeeze(results[0]).T
 
         scores = numpy.max(predictions[:, 4:], axis=1)

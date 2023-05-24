@@ -17,7 +17,7 @@ summary = "Python Imaging Library (Fork)"
 lock_version = "4.2"
 cross_platform = true
 groups = ["default"]
-content_hash = "sha256:c7cc2e9ad20fc360db6850fc894fc8706273f0f6319118f0a5e7704d726a7ec2"
+content_hash = "sha256:59c66dc3bb4e1fcd25468ca0977793e7b658970411350f809d9a4d0a2ca758bc"
 
 [metadata.files]
 "numpy 1.24.3" = [
