@@ -1,7 +1,8 @@
 [project]
 name = "onnx-predict-yolov8"
-version = "1.0.0"
+version = "1.0.2"
 description = ""
+readme = "README.md"
 authors = [
     {name = "Kasper Fromm Pedersen", email = "kasperf@cs.aau.dk"},
     {name = "Kristian Torp", email = "torp@cs.aau.dk"}
@@ -10,6 +11,7 @@ maintainers = [
     {name = "Kasper Fromm Pedersen", email = "kasperf@cs.aau.dk"},
 ]
 license = { file = "LICENSE"}
+keywords = ["ONNX", "YOLOv8", "onnxruntime", "vision"]
 requires-python = ">3.8,<3.11.0"
 dependencies = [
     "numpy>=1.20",
