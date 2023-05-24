@@ -2,12 +2,11 @@ from pathlib import Path
 from typing import cast
 
 import numpy
+import utils
+from model import Label, LabelImage, PInferenceSession
 from numpy import ndarray
 from PIL import Image as ImageModule
 from PIL.Image import Image
-
-import utils
-from model import Label, LabelImage, PInferenceSession
 
 
 class Predictor:
@@ -55,10 +54,10 @@ class Predictor:
         for bbox, label in zip(boxes[keep], class_ids[keep]):
             labels.append(
                 Label(
-                    x=bbox[0],
-                    y=bbox[1],
-                    width=bbox[2],
-                    height=bbox[3],
+                    x=bbox[0].item(),
+                    y=bbox[1].item(),
+                    width=bbox[2].item(),
+                    height=bbox[3].item(),
                     classifier=self.__names[label],
                 )
             )
