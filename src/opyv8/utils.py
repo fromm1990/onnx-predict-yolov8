@@ -56,8 +56,10 @@ def nms(
 
 def image_to_tensor(img: Image, model: PInferenceSession) -> ImageTensor:
     _, _, width, height = model.get_inputs()[0].shape
-    original_size = img.size
+
     img = ImageOps.exif_transpose(img)
+    original_size = img.size
+
     img = ImageOps.contain(img, (width, height), Resampling.BILINEAR)
     scale_size = img.size
 
