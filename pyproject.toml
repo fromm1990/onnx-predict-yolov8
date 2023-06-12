@@ -1,6 +1,6 @@
 [project]
 name = "onnx-predict-yolov8"
-version = "1.0.5"
+version = "1.0.6"
 description = ""
 readme = "README.md"
 authors = [
@@ -18,6 +18,15 @@ dependencies = [
     "Pillow>=9.1.0",
 ]
 
+[tool.pdm.dev-dependencies]
+test = [
+    "onnxruntime~=1.15.0",
+    "typer[all]~=0.9.0"
+]
+
 [project.urls]
 homepage = "https://www.cs.aau.dk/"
 repository = "https://github.com/fromm1990/onnx-predict-yolov8"
+
+[tool.pdm.scripts]
+predict = "python cli/main.py"
