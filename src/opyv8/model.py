@@ -54,7 +54,7 @@ class Label:
     width: int
     height: int
     classifier: str
-    confidence: int
+    confidence: float
 
 
 @dataclass
