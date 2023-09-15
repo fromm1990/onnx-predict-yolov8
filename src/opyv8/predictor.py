@@ -54,7 +54,7 @@ class Predictor:
 
         keep = utils.nms(boxes, scores, self.__iou_threshold)
         labels = []
-        for bbox, label in zip(boxes[keep], class_ids[keep]):
+        for bbox, label, scores in zip(boxes[keep], class_ids[keep], scores[keep]):
             labels.append(
                 Label(
                     x=bbox[0].item(),
@@ -62,6 +62,7 @@ class Predictor:
                     width=bbox[2].item(),
                     height=bbox[3].item(),
                     classifier=self.__names[label],
+                    confidence=scores.item(),
                 )
             )
 
