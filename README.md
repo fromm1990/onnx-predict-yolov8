@@ -1,4 +1,7 @@
 # ONNX-PREDICT-YOLOV8
+This project is not maintained any longer. Please use [yolonnx](https://pypi.org/project/yolonnx/) instead.
+___
+
 This repository is a light weight library to ease the use of ONNX models exported by the Ultralytics YOLOv8 framework.
 
 ## Example Usage
